@@ -14,7 +14,7 @@ string(FIND "${CUDAToolkit_INCLUDE_DIRS}" "aarch64-qnx" _aarch64_qnx_ctk)
 if(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64" AND (NOT _aarch64_linux_ctk EQUAL -1 OR NOT _aarch64_qnx_ctk EQUAL -1))
     set(CMAKE_CUDA_ARCHITECTURES 87 110)
 else()
-    set(CMAKE_CUDA_ARCHITECTURES 75 80 86 89 90 100 110 120)
+    set(CMAKE_CUDA_ARCHITECTURES 75)
 endif()
 
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -Wno-deprecated-gpu-targets")
